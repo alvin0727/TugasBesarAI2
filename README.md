@@ -2,7 +2,7 @@
 
 This project uses **Fuzzy Logic** to model and defuzzify the results for **Gastroesophageal Reflux Disease (GERD)**. Fuzzy Logic is a powerful tool for handling uncertainty and imprecise data, making it ideal for medical applications like GERD diagnosis and analysis.
 
-![Algorithm Fuzzy Visualizer](https://example.com/path/to/your/image.png)
+![Algorithm Fuzzy Visualizer](https://github.com/alvin0727/TugasBesarAI2/blob/main/static/tabel_akhir.png)
 ---
 
 # 📖 About the Project
