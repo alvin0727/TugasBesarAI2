@@ -1,0 +1,19 @@
+# Abaikan folder __pycache__
+__pycache__/
+
+# Abaikan file cache Python
+*.pyc
+*.pyo
+*.pyd
+
+# Abaikan folder checkpoint
+.ipynb_checkpoints/
+
+# Abaikan file virtual environment
+venv/
+env/
+
+# Abaikan file hasil build
+/dist/
+/build/
+/Lib

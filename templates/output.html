@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+html, body {
+	height:100%;
+	font-family: 'Poppins', sans-serif;
+}
+html {
+	display:table; width:100%;
+	/* background-image: url('background.jpg') no-repeat center center fixed;
+	background-size: cover; */
+	font-family: 'Helvetica', 'Arial', sans-serif;
+}
+body {
+	background-image: url("{{ url_for('static', filename='background.jpg') }}");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+    display:table-cell; 
+	text-align:center;
+	vertical-align:middle;
+}
+div {
+	margin: auto;
+	width: 40%;
+	height: auto;
+	padding: 2%;
+	padding-left: 5%;
+	padding-right: 5%;
+	background: rgba(43, 43, 43, 0.75);
+	color: white;
+}
+p {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: justify;
+}
+</style>
+<h1>Formulir Pengecekan Penyakit Gerdz</h1>
+</head>
+<body>
+<div>
+	<h3>{% for item in output %}
+			{{item.result}} %
+		{% endfor %}</h3>
+	<img src="{{ url_for('static', filename='tabel_akhir.png') }}" width="640" height="360">
+	<p>
+		Anda mempunyai kemungkinan penyakit GERD sebesar 
+		{% for item in output %}
+		{{item.result}} %
+			. Hal ini menandakan bahwa Anda beresiko 
+			{% if item.result <= 20 %}
+				sangat rendah
+			{% elif item.result <= 40 %}
+				rendah
+			{% elif item.result <= 60 %}
+				menengah
+			{% elif item.result <= 80 %}
+				tinggi
+			{% else %}
+				sangat tinggi
+			{% endif %}
+		{% endfor %}
+		 mengalami penyakit GERD
+	</p>
+</div>
+</body>
+</html>
